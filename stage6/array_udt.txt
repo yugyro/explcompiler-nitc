@@ -1,0 +1,37 @@
+type
+    Point {
+        int x;
+        int y;
+    }
+endtype
+
+decl
+    Point points[3];
+    int i;
+enddecl
+
+int main() {
+    decl
+    enddecl
+    begin
+        points[0] = alloc();
+        points[1] = alloc();
+        points[2] = alloc();
+
+        read(points[0].x);
+        read(points[0].y);
+        read(points[1].x);
+        read(points[1].y);
+        read(points[2].x);
+        read(points[2].y);
+
+        i = 0;
+        while (i < 3) do
+            write(points[i].x);
+            write(points[i].y);
+            i = i + 1;
+        endwhile;
+
+        return 0;
+    end;
+}

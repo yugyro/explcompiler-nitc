@@ -1,0 +1,34 @@
+decl
+    int a, b, c, d, e, x, y, z, i, sum;
+enddecl
+begin
+    read(a);
+    read(b);
+
+    x = 2 * 3 + 4;          
+    y = 100 / 5 - 8;       
+    z = x + (4 * 5);       
+
+    c = a + b;
+    d = a + b;              
+    e = (a * b) + (a * b);  
+    z = (a - b) * (a - b);  
+
+    write(c);
+    write(d);
+    write(e);
+    write(z);
+
+    i = 0;
+    sum = 0;
+    while (i < 3 * 2) do    
+        sum = sum + i * 2;
+        i = i + 1;
+    endwhile;
+
+    if (sum > x + y) then
+        write(sum);
+    else
+        write(x);
+    endif;
+end

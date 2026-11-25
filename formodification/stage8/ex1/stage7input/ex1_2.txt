@@ -1,0 +1,52 @@
+class
+    Counter {
+        decl
+            int value;
+            int init(int n);
+            int get();
+        enddecl
+        int init(int n) {
+            decl
+            enddecl
+            begin
+                self.value = n;
+                return 1;
+            end
+        }
+        int get() {
+            decl
+            enddecl
+            begin
+                return self.value;
+            end
+        }
+    }
+endclass
+
+decl
+    int readCounter(Counter c);
+enddecl
+
+int readCounter(Counter c) {
+    decl
+    enddecl
+    begin
+        return c.get();
+    end
+}
+
+int main() {
+    decl
+        Counter localCounter;
+        int status;
+        int num;
+    enddecl
+    begin
+        status = initialize();
+        localCounter = new(Counter);
+        read(num);
+        status = localCounter.init(num);
+        write(readCounter(localCounter));
+        return 0;
+    end
+}

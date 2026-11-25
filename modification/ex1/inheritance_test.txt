@@ -1,0 +1,49 @@
+class
+    Base {
+        decl
+            int value;
+            int get();
+        enddecl
+
+        int get() {
+            decl
+            enddecl
+            begin
+                return self.value;
+            end
+        }
+    }
+
+    Child extends Base {
+        decl
+            int extra;
+            int get();
+        enddecl
+
+        int get() {
+            decl
+            enddecl
+            begin
+                return self.value + self.extra;
+            end
+        }
+    }
+endclass
+
+decl
+    Base b;
+    Child c;
+    int x;
+enddecl
+
+int main() {
+    decl
+    enddecl
+    begin
+        x = initialize();
+        c = new(Child);
+        b = c;
+        b = new(Child);
+        return 0;
+    end
+}

@@ -1,0 +1,12 @@
+yacc -d stage4.y
+lex stage4.l
+gcc y.tab.c lex.yy.c tree.c symboltable.c codegen.c -o compiler5
+
+flex -o labeltrans.yy.c labeltrans.l
+gcc labeltrans.yy.c -o translator
+
+
+./compiler5 bubblesort.txt
+./translator intermediate.xsm targetcode.xsm 
+
+bash ./xsm -l library.lib -e workdir/stage4/targetcode.xsm

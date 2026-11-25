@@ -1,0 +1,4 @@
+decl
+int m, k;
+enddecl
+read(m);

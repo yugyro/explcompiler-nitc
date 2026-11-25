@@ -1,0 +1,4 @@
+Number of constant foldings : 7
+Number of CSE eliminations  : 3
+Instructions before optimization : 48
+Instructions after optimization  : 38

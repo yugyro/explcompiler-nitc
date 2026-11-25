@@ -1,0 +1,47 @@
+class
+    Base {
+        decl
+            int get();
+        enddecl
+        int get() {
+            decl
+            enddecl
+            begin
+                return 1;
+            end
+        }
+    }
+
+    Child extends Base {
+        decl
+            int get(int n);
+        enddecl
+        int get(int n) {
+            decl
+            enddecl
+            begin
+                return n;
+            end
+        }
+    }
+endclass
+
+decl
+    Base b;
+    Child c;
+enddecl
+
+int main() {
+    decl
+        int x;
+        int n;
+    enddecl
+    begin
+        c = new(Child);
+        b = c;
+        read(n);
+        write(b.get());
+        write(c.get(n));
+        return 0;
+    end
+}

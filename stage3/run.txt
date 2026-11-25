@@ -1,0 +1,12 @@
+yacc -d stage3.y
+lex stage3.l
+gcc y.tab.c lex.yy.c tree.c codegen.c -o compiler3
+
+flex -o labeltrans.yy.c labeltrans.l
+gcc labeltrans.yy.c -o translator
+
+
+./compiler3 input.txt              
+./translator intermediate.xsm targetcode.xsm 
+
+bash ./xsm -l library.lib -e workdir/stage3/targetcode.xsm

@@ -1,0 +1,38 @@
+	read a
+	read b
+	x = 10
+	y = 12
+	z = 30
+	t7 = a + b
+	c = t7
+	d = t7
+	t9 = a * b
+	t11 = t9 + t9
+	e = t11
+	t12 = a - b
+	t14 = t12 * t12
+	z = t14
+	write t7
+	write t7
+	write t11
+	write t14
+	i = 0
+	sum = 0
+L1:
+	t16 = i < 6
+	ifFalse t16 goto L2
+	t17 = i * 2
+	t18 = t17 + sum
+	sum = t18
+	t19 = i + 1
+	i = t19
+	goto L1
+L2:
+	t20 = x + y
+	t21 = sum > t20
+	ifFalse t21 goto L3
+	write sum
+	goto L4
+L3:
+	write x
+L4:

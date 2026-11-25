@@ -1,0 +1,19 @@
+decl
+enddecl
+
+int main()
+{
+    decl
+        int a;
+    enddecl
+
+    begin
+        a = -7 % 4 + 2 * 3;
+
+        if (a == -1 || a == 5 && !(a < 0)) then
+            write(a);
+        endif;
+
+        return 0;
+    end
+}
